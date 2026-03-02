@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Dispensa - Fonte Meravigliosa</title>
+
+<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=2000&q=80') no-repeat center center fixed;
+background-size:cover;
+color:#2e3d2f;
+scroll-behavior:smooth;
+position:relative;
+}
+
+body::before{
+content:'';
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.55);
+z-index:0;
+}
+
+@keyframes jump{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+@keyframes swing{0%,100%{transform:rotate(0deg);}25%{transform:rotate(5deg);}75%{transform:rotate(-5deg);}}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+@keyframes floatLogo{0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}}
+
+header{
+text-align:center;
+padding:100px 20px 60px 20px;
+position:relative;
+z-index:1;
+}
+
+.logo-main{
+font-size:110px;
+margin-bottom:20px;
+display:inline-block;
+animation:floatLogo 3s ease-in-out infinite;
+cursor:pointer;
+}
+
+.logo-main img{
+width:140px;
+height:auto;
+display:block;
+}
+
+.logo-main:hover{
+animation:jump .6s ease;
+}
+
+header h1{
+font-size:50px;
+font-family:'Dancing Script', cursive;
+font-weight:600;
+color:#000;
+display:inline-flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-side{
+font-size:60px;
+animation:swing 2s infinite ease-in-out;
+}
+
+header p{
+font-size:20px;
+margin-top:10px;
+color:#1b3a1b;
+font-weight:600;
+background:rgba(255,255,255,.6);
+display:inline-block;
+padding:5px 15px;
+border-radius:12px;
+}
+
+nav{
+background:rgba(255,255,255,0.85);
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+padding:12px 10px;
+position:sticky;
+top:0;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+z-index:100;
+font-weight:600;
+border-radius:0 0 15px 15px;
+}
+
+nav a{
+color:#2e7d32;
+text-decoration:none;
+padding:6px 12px;
+border-radius:8px;
+transition:.3s;
+font-size:16px;
+}
+
+nav a:hover{
+background:#2e7d32;
+color:#fff;
+}
+
+section,.about,.contact{
+background:linear-gradient(to bottom right,rgba(255,255,255,.15),rgba(200,255,200,.2));
+backdrop-filter:blur(12px);
+border-radius:25px;
+padding:70px 40px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+position:relative;
+overflow:hidden;
+margin:40px auto;
+max-width:1200px;
+}
+
+section h2{
+font-size:40px;
+margin-bottom:60px;
+color:#2e7d32;
+text-align:center;
+}
+
+section h2::after{
+content:'';
+width:80px;
+height:4px;
+background:#f57c00;
+display:block;
+margin:15px auto 0 auto;
+border-radius:2px;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:35px;
+justify-content:center;
+}
+
+.card{
+background:rgba(255,255,255,.4);
+border-radius:25px;
+padding:35px 25px;
+box-shadow:0 15px 35px rgba(0,0,0,.1);
+transition:.4s;
+text-align:left;
+}
+
+.card:hover{
+transform:translateY(-15px);
+box-shadow:0 25px 45px rgba(0,0,0,.15);
+}
+
+.card i{
+font-size:36px;
+margin-bottom:15px;
+animation:bounce 2s infinite;
+display:block;
+}
+
+/* colori icone */
+.fa-hamburger{ color:#8B4513; }
+.fa-carrot{ color:#FF6F00; }
+.fa-star{ color:#FFD700; }
+.fa-bread-slice{ color:#D2691E; }
+.fa-pizza-slice{ color:#E53935; }
+.fa-seedling{ color:#2E7D32; }
+.fa-cookie-bite{ color:#A1887F; }
+.fa-birthday-cake{ color:#EC407A; }
+.fa-cupcake{ color:#F48FB1; }
+
+/* cupcake galleggiante */
+.cupcake-emoji{
+font-size:36px;
+display:block;
+margin-bottom:10px;
+animation:bounce 2s infinite;
+}
+
+.card h3{
+margin-bottom:15px;
+color:#2e7d32;
+font-size:22px;
+}
+
+.card p{
+font-size:15px;
+line-height:1.8;
+color:#555;
+}
+
+.about p{
+font-size:17px;
+line-height:1.9;
+color:#3a4d3a;
+}
+
+.contact a{
+color:#1b5e20;
+text-decoration:none;
+font-weight:600;
+}
+
+.contact a:hover{
+text-decoration:underline;
+}
+
+footer{
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:30px;
+font-size:14px;
+}
+
+footer a{
+color:white;
+text-decoration:none;
+}
+
+footer a:hover{
+color:#a3d9a5;
+}
+
+.social{
+margin-top:15px;
+font-size:20px;
+}
+
+.social a{
+margin:0 10px;
+color:white;
+}
+
+.social a:hover{
+color:#f57c00;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-main">
+<img src="https://i.imgur.com/veIPCPA.png" alt="Logo La Dispensa">
+</div>
+
+<h1>
+La Dispensa
+<span class="logo-side">🥪</span>
+</h1>
+
+<p>Gusto genuino, ingredienti freschi e passione artigianale</p>
+
+</header>
+
+<nav>
+<a href="#gastronomia">Gastronomia</a>
+<a href="#forno">Pane & Forno</a>
+<a href="#pasticceria">Pasticceria</a>
+<a href="#chi-siamo">Chi Siamo</a>
+<a href="#contatti">Contatti</a>
+</nav>
+
+<section id="gastronomia">
+<h2>🥪 Gastronomia</h2>
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-hamburger"></i>
+<h3>Tramezzini Freschi</h3>
+<p>Preparati ogni giorno con ingredienti selezionati e pane soffice artigianale.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-carrot"></i>
+<h3>Insalate & Piatti Freddi</h3>
+<p>Opzioni leggere e sane per una pausa gustosa e nutriente.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-star"></i>
+<h3>Specialità del Giorno</h3>
+<p>Proposte stagionali con ingredienti freschi e locali.</p>
+</div>
+
+</div>
+</section>
+
+<section id="forno">
+<h2>🍞 Pane & Prodotti da Forno</h2>
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-bread-slice"></i>
+<h3>Pane Artigianale</h3>
+<p>Impasti a lunga lievitazione, farine selezionate e profumo autentico.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-pizza-slice"></i>
+<h3>Focacce & Pizze</h3>
+<p>Morbide dentro e croccanti fuori, ideali per ogni momento della giornata.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-seedling"></i>
+<h3>Prodotti Integrali</h3>
+<p>Alternative sane e ricche di fibre per uno stile di vita equilibrato.</p>
+</div>
+
+</div>
+</section>
+
+<section id="pasticceria">
+<h2>🍰 Pasticceria</h2>
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-cookie-bite"></i>
+<h3>Dolci Artigianali</h3>
+<p>Preparati con ingredienti naturali e senza conservanti.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-birthday-cake"></i>
+<h3>Ciambelloni, Crostate & Pasticceria Mignon</h3>
+<p>Deliziosi ciambelloni, crostate fragranti e pasticceria mignon artigianale.</p>
+</div>
+
+<div class="card">
+<span class="cupcake-emoji">🧁</span>
+<h3>Biscotti & Piccola Pasticceria</h3>
+<p>Perfetti per accompagnare un buon caffè.</p>
+</div>
+
+</div>
+</section>
+
+<section id="chi-siamo" class="about">
+<h2>🌿 Chi Siamo</h2>
+<p>La Dispensa Fonte Meravigliosa nasce dall’amore per il cibo genuino e la tradizione artigianale.</p>
+</section>
+
+<section id="contatti" class="contact">
+<h2>📍 Contatti</h2>
+
+<p><strong>Indirizzo:</strong> Via Andrea Meldola 160, Fonte Meravigliosa - Roma</p>
+
+<p><strong>Telefono:</strong> 
+<a href="tel:3282391361">328 239 1361</a>
+</p>
+
+<p><strong>Email:</strong> 
+<a href="mailto:ladispensafonte@hotmail.it">ladispensafonte@hotmail.it</a>
+</p>
+
+<p>
+<strong>Instagram:</strong> 
+<a href="https://instagram.com/ladispensafontemeravigliosa" target="_blank">
+<i class="fab fa-instagram"></i> @ladispensafontemeravigliosa
+</a>
+</p>
+
+<p><strong>Orari:</strong> 08:00 - 21:00</p>
+
+</section>
+
+<footer>
+
+© 2026 ladispensafontemeravigliosa.it - Tutti i diritti riservati
+
+<div class="social">
+<a href="https://instagram.com/ladispensafontemeravigliosa" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+</div>
+
+</footer>
+
+</body>
+</html>
